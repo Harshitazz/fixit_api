@@ -17,7 +17,8 @@ origins = [
     "http://localhost:3000",
     "https://fixit-git-main-harshitazzs-projects.vercel.app/",
     "https://fixit-harshitazzs-projects.vercel.app/",
-    "https://fixit-kohl.vercel.app/"
+    "https://fixit-kohl.vercel.app/",
+    "https://fixitapi-harshitazzs-projects.vercel.app"
 ]
 
 app.add_middleware(
