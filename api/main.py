@@ -13,17 +13,19 @@ from sqlalchemy.orm import sessionmaker
 app = FastAPI()
 
 # Allow CORS for your frontend
-origins = [
-    "http://localhost:3000",
-    "https://fixit-git-main-harshitazzs-projects.vercel.app/",
-    "https://fixit-harshitazzs-projects.vercel.app/",
-    "https://fixit-kohl.vercel.app/"
-]
+# origins = [
+
+#     # "http://localhost:3000/",
+#     # "https://fixit-git-main-harshitazzs-projects.vercel.app/",
+#     # "https://fixit-harshitazzs-projects.vercel.app/",
+#     # "https://fixit-kohl.vercel.app/"
+# ]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
 
