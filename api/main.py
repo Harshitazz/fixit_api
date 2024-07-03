@@ -7,7 +7,6 @@ from sqlalchemy.ext.asyncio import AsyncSession,create_async_engine
 from sqlalchemy.future import select
 from sqlalchemy.orm import sessionmaker
 
-# Assuming you've defined your SQLAlchemy models and database setup as shown earlier
 
 # Initialize FastAPI app
 app = FastAPI()
@@ -35,14 +34,14 @@ DATABASE_URL = "postgresql+asyncpg://flask_user:your_password@localhost/flask_ap
 engine = create_async_engine(DATABASE_URL, echo=True, future=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine, class_=AsyncSession)
 
-# Predefined questions and answers (with case insensitivity)
+# Predefined questions and answers 
 predefined_questions = {
     "what is your name?": "I am a bot.",
     "how are you?": "I am fine, thank you.",
     "what can you do?": "I can answer your questions."
 }
 
-# Define the Question model (assuming you already have it defined)
+# Define the Question model
 
 class Question(BaseModel):
     question: str
